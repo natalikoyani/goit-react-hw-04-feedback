@@ -17,6 +17,8 @@ export const App = () => {
         return setNeutral(neutral + 1);
       case 'bad':
         return setBad(bad + 1);
+      default:
+        return;
     }
   };
 
