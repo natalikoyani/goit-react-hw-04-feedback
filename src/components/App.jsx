@@ -12,11 +12,11 @@ export const App = () => {
   const updateFeedback = feedbackType => {
     switch (feedbackType) {
       case 'good':
-        return setGood(good + 1);
+        return setGood(prevGood => prevGood + 1);
       case 'neutral':
-        return setNeutral(neutral + 1);
+        return setNeutral(prevNeutral => prevNeutral + 1);
       case 'bad':
-        return setBad(bad + 1);
+        return setBad(prevBad => prevBad + 1);
       default:
         return;
     }
